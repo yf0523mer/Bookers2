@@ -1,0 +1,23 @@
+<div class="container">
+  	<div class="col-xs-3">
+	<h2>User info</h2>
+			<div style="padding:10px;">
+				<%= attachment_image_tag user, :image, :fill, 90, 90, fallback:"No_image.png",size: '90x90' %>
+			</div>
+		<table class="table">
+			<tbody>
+				<tr>
+					<th>name</th>
+					<th><%= user.name %></th>
+				</tr>
+				<tr>
+					<th>introduction</th>
+					<th><%= user.introduction %></th>
+				</tr>
+			</tbody>
+		</table>
+		<% if user.id == current_user.id %>
+	        		<%= link_to " ", edit_user_path(current_user), class:"edit_user_#{user.id} col-xs-12 btn btn-default glyphicon glyphicon-wrench" %>
+	    <% end %>
+	</div>
+</div>
