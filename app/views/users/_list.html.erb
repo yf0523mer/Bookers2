@@ -17,7 +17,7 @@
 			</tbody>
 		</table>
 		<% if user.id == current_user.id %>
-	        		<%= link_to " ", edit_user_path(current_user), class: "edit_user_#{user.id} col-xs-12 btn btn-default glyphicon glyphicon-wrench" %>
+	        		<%= link_to " ", edit_user_path(current_user), class:"edit_user_#{user.id} col-xs-12 btn btn-default glyphicon glyphicon-wrench" %>
 	    <% end %>
 	</div>
 </div>

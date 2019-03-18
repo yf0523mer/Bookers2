@@ -29,7 +29,7 @@ class UsersController < ApplicationController
     def edit
         @user = User.find(params[:id])
         if @user.id != current_user.id
-           flash[:notice] = "Permission error."
+           flash[:error] = "Permission error."
            redirect_to user_path(current_user)
       end
     end

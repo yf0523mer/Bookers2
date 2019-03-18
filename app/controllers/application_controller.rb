@@ -11,8 +11,6 @@ class ApplicationController < ActionController::Base
 	  top_user_path
 	end
 
-	# def after_sign_out_path_for(resource)
-	# end
 
   	protected
   		def configure_permitted_parameters
